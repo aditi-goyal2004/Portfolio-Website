@@ -1,0 +1,340 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  color: #eee;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #ff4081;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1100px; /* limit width if you want */
+  background: #1f1f1fcc;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  cursor: grab;
+  user-select: none;
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ff4081;
+  cursor: pointer;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links li a {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.nav-links li a:hover {
+  background: #ff4081;
+  color: #121212;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 120px auto 60px;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+.hero-text h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ff4081;
+}
+.hero-text h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #00bcd4;
+  height: 30px; /* reserve space for typing */
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+.btn {
+  display: inline-block;
+  background: #ff4081;
+  color: #121212;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(255,64,129,0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background: #e73370;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(231,51,112,0.6);
+}
+.hero-img img {
+  width: 280px;
+  border-radius: 10%;
+  border: 4px solid #ff4081;
+  box-shadow: 0 8px 20px rgba(255,64,129,0.5);
+  transition: transform 0.4s ease;
+}
+.hero-img img:hover {
+  transform: rotate(8deg) scale(1.05);
+}
+
+/* Sections */
+section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 2rem;
+}
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff4081;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* About */
+.about p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  color: #ccc;
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  justify-content: center;
+}
+.project-card {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 8px 15px rgba(0, 188, 212, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #eee;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255,64,129,0.6);
+}
+.project-card h3 {
+  margin-bottom: 0.8rem;
+  color: #ff4081;
+}
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.project-card a {
+  font-weight: 600;
+  margin-right: 1rem;
+  color: #00bcd4;
+}
+.project-card a:hover {
+  color: #ff4081;
+}
+
+/* Skills */
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 700px;
+}
+.skills ul li {
+  background: #333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #00bcd4;
+  box-shadow: 0 5px 10px rgba(0, 188, 212, 0.3);
+  transition: background 0.3s ease;
+}
+.skills ul li:hover {
+  background: #ff4081;
+  color: #121212;
+  box-shadow: 0 8px 20px rgba(255,64,129,0.5);
+}
+
+/* Contact */
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+.contact a {
+  color: #00bcd4;
+  font-weight: 600;
+}
+.contact a:hover {
+  color: #ff4081;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  background: #1f1f1f;
+  color: #666;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img img {
+    margin-top: 2rem;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+:target::before {
+  content: "";
+  display: block;
+  height: 80px; /* navbar height */
+  margin-top: -80px; /* pull content up */
+  visibility: hidden;
+}
+/* Initial state: hidden and moved down a bit */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+/* When visible: fully visible and in place */
+.fade-in-section.is-visible {
+  opacity: 1;.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+  transform: none;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #5c6bc0;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+#back-to-top:hover {
+  background: #3f51b5;
+}
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #5c6bc0;
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+}
+/* Default: Dark Mode */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #f9f9fb;
+  color: #1e1e2f;
+}
+
+body.light-mode section {
+  background-color: #FAE1DF;
+  color: #1e1e2f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+body.light-mode a {
+  color: #0D1F2D;
+  text-decoration: none;
+}
+
+body.light-mode a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar & Footer */
+body.light-mode .navbar,
+body.light-mode footer {
+  background-color: #9EA3B0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Toggle Button in Light Mode */
+body.light-mode #theme-toggle {
+  background-color: #c66262;
+  color: #0D1F2D;
+  border-color: #ccc;
+}
